@@ -1,15 +1,30 @@
 
 package project2subsystem;
 
+import java.util.ArrayList;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 // JESSE HIEBNER | Student Number: 220357676
 
 
-public class SubsystemSoftskillsGUI extends javax.swing.JFrame {
-
-   
-    public SubsystemSoftskillsGUI() {
+public class SubsystemSoftskillsGUI extends javax.swing.JFrame
+{ 
+    ArrayList <String> SoftSkillsList = new ArrayList<>();
+    String FinalListOutput;
+    public SubsystemSoftskillsGUI()
+    {        
+        SoftSkillsList.add("Communication");
+        SoftSkillsList.add("Organization");
+        SoftSkillsList.add("Teamwork");
+        SoftSkillsList.add("Punctuality");
+        SoftSkillsList.add("Critical Thinking");
+        SoftSkillsList.add("Social Skills");
+        SoftSkillsList.add("Creativity");
+        SoftSkillsList.add("Interpersonal Communication");
+        SoftSkillsList.add("Adaptibility");
+        SoftSkillsList.add("Friendly Personality");    
+           
         initComponents();
     }
 
@@ -58,7 +73,6 @@ public class SubsystemSoftskillsGUI extends javax.swing.JFrame {
             }
         });
 
-        ChkBxCommunication.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         ChkBxCommunication.setText("Communication");
 
         ChkBxOrganization.setText("Organization");
@@ -207,7 +221,7 @@ public class SubsystemSoftskillsGUI extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(ChkBxTeamwork)
                             .addComponent(ChkBxIntrCom))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(ChkBxPunctuality)
                             .addComponent(ChkBxAdaptability))
@@ -223,10 +237,11 @@ public class SubsystemSoftskillsGUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(PnlPinkColourBottom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnSaveSkills, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)
-                    .addComponent(BtnContinue, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BtnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BtnSaveSkills, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(BtnContinue, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BtnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(35, 35, 35))
         );
 
@@ -238,40 +253,66 @@ public class SubsystemSoftskillsGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnExitActionPerformed
 
     private void BtnContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnContinueActionPerformed
-        //This button in the future will load one of the students' form
-                JFrame HardSkillsGUI = new JFrame();
-        
+       //This button in the future will load one of the students' form
+       this.dispose(); 
+       
+       JFrame HardSkillsGUI = new JFrame();
+       HardSkillsGUI.setVisible(true);
+                
     }//GEN-LAST:event_BtnContinueActionPerformed
 
     private void BtnSaveSkillsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSaveSkillsActionPerformed
-        // TODO add your handling code here:
+        //Save skills which were selected
+        FinalListOutput = "";
+        if (ChkBxCommunication.isSelected()) 
+        {
+             FinalListOutput = SoftSkillsList.get(0) + " \n";
+        }
+        if (ChkBxOrganization.isSelected())
+        {
+             FinalListOutput = FinalListOutput + SoftSkillsList.get(1) + " \n";
+        }
+         if (ChkBxTeamwork.isSelected())
+        {
+             FinalListOutput = FinalListOutput + SoftSkillsList.get(2) + " \n";
+        }
+          if (ChkBxPunctuality.isSelected())
+        {
+             FinalListOutput = FinalListOutput + SoftSkillsList.get(3) + " \n";
+        }
+           if (ChkBxCritThinking.isSelected())
+        {
+             FinalListOutput = FinalListOutput + SoftSkillsList.get(4) + " \n";
+        }
+            if (ChkBxSocialSkills.isSelected())
+        {
+             FinalListOutput = FinalListOutput + SoftSkillsList.get(5) + " \n";
+        }
+             if (ChkBxCreativity.isSelected())
+        {
+             FinalListOutput = FinalListOutput + SoftSkillsList.get(6) + " \n";
+        }
+             if (ChkBxIntrCom.isSelected())
+        {
+             FinalListOutput = FinalListOutput + SoftSkillsList.get(7) + " \n";
+        }             
+               if (ChkBxAdaptability.isSelected())
+        {
+             FinalListOutput = FinalListOutput + SoftSkillsList.get(8) + " \n";
+        } 
+               if (ChkBxFriendlyPersonality.isSelected())
+        {
+             FinalListOutput = FinalListOutput + SoftSkillsList.get(9) + " \n";
+        }
+               
+        JOptionPane.showMessageDialog(null, "You have saved the following Soft Skills:\n" + FinalListOutput);
     }//GEN-LAST:event_BtnSaveSkillsActionPerformed
 
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SubsystemSoftskillsGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SubsystemSoftskillsGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SubsystemSoftskillsGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SubsystemSoftskillsGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
+    public static void main(String args[])
+    {
+       
+    // Subsystem
+       
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new SubsystemSoftskillsGUI().setVisible(true);

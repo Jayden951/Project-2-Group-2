@@ -99,7 +99,7 @@
                           <Component id="ChkBxTeamwork" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="ChkBxIntrCom" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="19" max="32767" attributes="0"/>
+                      <EmptySpace pref="20" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="ChkBxPunctuality" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="ChkBxAdaptability" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -121,10 +121,12 @@
               </Group>
               <Component id="PnlPinkColourBottom" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="BtnSaveSkills" alignment="1" pref="52" max="32767" attributes="0"/>
-                  <Component id="BtnContinue" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                  <Component id="BtnExit" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="BtnSaveSkills" alignment="1" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="BtnContinue" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                      <Component id="BtnExit" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
           </Group>
@@ -156,9 +158,6 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="ChkBxCommunication">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="12" style="0"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="Communication"/>
       </Properties>
     </Component>
